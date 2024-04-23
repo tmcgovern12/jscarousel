@@ -32,6 +32,74 @@ header h3 {
 }
 
 
+
+.imagecarousel {
+    position: relative;
+}
+
+.image {
+    display: none;
+}
+
+.image:first-of-type {
+    display: block;
+}
+
+.image img {
+    border-radius: 10px;
+    border: 3px ridge silver;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 200%;
+    color: silver;
+    cursor: pointer;
+    transition: all ease ease-in-out 300ms;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.prev:hover, .next:hover {
+    color: gold;
+}
+
+.fadeout {
+    animation: fade 2000ms;
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+
+
+.dots {
+    display: flex;
+    gap: .25em;
+   justify-content: center;
+   margin-top: .5em;
+  
+}
+
+.prev {
+    left: 5px;
+}
+
+.dot {
+    background-color: #bbb;
+    padding: 7px;
+    border-radius: 50%;
+    
+}
+
+.next {
+    right: 5px;
+}
+
+
+
 footer {
     padding: 2em 0;
     font-size: 90%;
@@ -41,3 +109,34 @@ footer {
     border-top: 3px ridge silver;
     margin-top: 2em;
 }
+
+
+
+
+@media screen and (max-width: 800px) {
+   
+    .image {
+        width: 100%; 
+        border-radius: 0; 
+        overflow: hidden; 
+    }
+
+   
+    header {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    
+    header h1 {
+        font-size: 24px; 
+    }
+
+    header p {
+        font-size: 16px; 
+    }
+}
+   
+    
+    
